@@ -1,6 +1,6 @@
-package cc.hubisoft.y2025.d01
+package cc.hubisoft.solutions.y2025.d01
 
-import cc.hubisoft.y2025.d01.Direction.Companion.direction
+import cc.hubisoft.solutions.y2025.d01.Direction.Companion.direction
 import kotlin.math.abs
 
 data class SecretEntrance(private val input: List<String>) {

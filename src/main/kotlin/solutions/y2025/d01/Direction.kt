@@ -1,4 +1,4 @@
-package cc.hubisoft.y2025.d01
+package cc.hubisoft.solutions.y2025.d01
 
 enum class Direction {
     LEFT, RIGHT;
