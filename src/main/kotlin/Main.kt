@@ -1,12 +1,7 @@
 package cc.hubisoft
 
-import cc.hubisoft.utils.readFile
-import cc.hubisoft.solutions.y2025.d04.PrintingDepartment
+import cc.hubisoft.runner.SolutionRunner.run
 
 fun main() {
-    val input = readFile(2025, "day04")
-    val day = PrintingDepartment(input)
-
-    println(day.solvePartI())
-    println(day.solvePartII())
+    run(2024, 4)
 }

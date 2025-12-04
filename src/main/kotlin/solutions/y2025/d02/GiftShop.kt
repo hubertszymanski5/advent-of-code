@@ -1,16 +1,18 @@
 package cc.hubisoft.solutions.y2025.d02
 
-data class GiftShop(private val input: String) {
+import cc.hubisoft.runner.DaySolution
+
+data class GiftShop(private val input: String): DaySolution {
 
     private val ranges: List<LongRange> = input
         .split(",")
         .map { it.toRange() }
 
-    fun solvePartI() = ranges.flatMap { it.toList() }
+    override fun solvePartI() = ranges.flatMap { it.toList() }
         .filter { it.isInvalid() }
         .sum()
 
-    fun solvePartII() = ranges.flatMap { it.toList() }
+    override fun solvePartII() = ranges.flatMap { it.toList() }
         .filter { it.isInvalidByMultipleRepetitions() }
         .sum()
 

@@ -1,15 +1,16 @@
 package cc.hubisoft.solutions.y2025.d01
 
+import cc.hubisoft.runner.DaySolution
 import cc.hubisoft.solutions.y2025.d01.Direction.Companion.direction
 import kotlin.math.abs
 
-data class SecretEntrance(private val input: List<String>) {
+data class SecretEntrance(private val input: List<String>): DaySolution {
 
     private var count: Int = 50
     private var code = 0
     private val commands = mapInput()
 
-    fun solvePartI(): Int {
+    override fun solvePartI(): Int {
         count = 50
         code = 0
         commands.forEach { command ->
@@ -22,7 +23,7 @@ data class SecretEntrance(private val input: List<String>) {
         return code
     }
 
-    fun solvePartII(): Int {
+    override fun solvePartII(): Int {
         count = 50
         code = 0
         commands.forEach { command ->

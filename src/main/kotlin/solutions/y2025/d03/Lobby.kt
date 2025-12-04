@@ -1,17 +1,18 @@
 package cc.hubisoft.solutions.y2025.d03
 
+import cc.hubisoft.runner.DaySolution
 import kotlin.math.pow
 
-data class Lobby(private val input: List<String>) {
+data class Lobby(private val input: List<String>): DaySolution {
 
     private val batteries: List<List<Int>> = input.map {
         it.map { it.digitToInt() }
     }
 
-    fun solvePartI() = batteries
+    override fun solvePartI() = batteries
         .sumOf { it.getMaxJoltage(2) }
 
-    fun solvePartII(): Long = batteries
+    override fun solvePartII(): Long = batteries
         .sumOf { it.getMaxJoltage(12) }
 
     private fun List<Int>.getMaxJoltage(n: Int): Long =

@@ -1,15 +1,16 @@
 package cc.hubisoft.solutions.y2025.d04
 
+import cc.hubisoft.runner.DaySolution
 import cc.hubisoft.utils.Direction.Companion.allDirections
 import cc.hubisoft.utils.Map2D
 
-data class PrintingDepartment(private val input: List<String>) {
+data class PrintingDepartment(private val input: List<String>): DaySolution {
 
     private val map = Map2D(input.map { it.toList() })
 
-    fun solvePartI() = map.copy().runCleanupInteration()
+    override fun solvePartI() = map.copy().runCleanupInteration()
 
-    fun solvePartII() = map.copy()
+    override fun solvePartII() = map.copy()
         .let { mapCopy ->
             do {
                 val cleanedRolls = mapCopy.runCleanupInteration()
