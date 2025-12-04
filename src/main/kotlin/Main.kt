@@ -1,11 +1,11 @@
 package cc.hubisoft
 
 import cc.hubisoft.utils.readFile
-import cc.hubisoft.solutions.y2025.d03.Lobby
+import cc.hubisoft.solutions.y2025.d04.PrintingDepartment
 
 fun main() {
-    val input = readFile(2025, "day03")
-    val day = Lobby(input)
+    val input = readFile(2025, "day04")
+    val day = PrintingDepartment(input)
 
     println(day.solvePartI())
     println(day.solvePartII())
