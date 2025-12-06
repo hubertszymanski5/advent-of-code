@@ -1,4 +1,4 @@
-package solutions.y2025.day05
+package solutions.y2025.d05
 
 import cc.hubisoft.solutions.y2025.day05.Cafeteria
 import org.assertj.core.api.Assertions.assertThat

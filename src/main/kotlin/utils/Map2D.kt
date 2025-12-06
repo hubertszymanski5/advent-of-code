@@ -30,6 +30,8 @@ class Map2D<T> {
 
     fun values() = fields.values
 
+    fun columns() = (0 until xSize).map { x -> (0 until ySize).map { y -> get(x, y)!! } }
+
     fun replace(point: IntVector, newValue: T) {
         fields[point.x to point.y] = newValue
     }
