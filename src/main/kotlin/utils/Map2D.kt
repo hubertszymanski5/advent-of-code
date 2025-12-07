@@ -24,7 +24,11 @@ class Map2D<T> {
 
     fun get(x: Int, y: Int): T? = fields[x to y]
 
+    fun get(p: Pair<Int, Int>): T? = fields[p]
+
     fun get(v: IntVector): T? = get(v.x, v.y)
+
+    fun find(value: T) = fields.entries.find { it.value == value }?.key
 
     fun allCoordinates() = (0 until xSize).flatMap { x -> (0 until ySize).map { y -> IntVector(x, y) } }
 
