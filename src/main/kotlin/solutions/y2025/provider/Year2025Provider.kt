@@ -8,6 +8,7 @@ import cc.hubisoft.solutions.y2025.d04.PrintingDepartment
 import cc.hubisoft.solutions.y2025.d06.TrashCompactor
 import cc.hubisoft.solutions.y2025.d07.Laboratories
 import cc.hubisoft.solutions.y2025.d08.Playground
+import cc.hubisoft.solutions.y2025.d09.MovieTheater
 import cc.hubisoft.solutions.y2025.day05.Cafeteria
 import cc.hubisoft.utils.readFile
 
@@ -24,6 +25,7 @@ object Year2025Provider : DaySolutionProvider {
         6 to { TrashCompactor(readFile(YEAR, "day06")) },
         7 to { Laboratories(readFile(YEAR, "day07")) },
         8 to { Playground(readFile(YEAR, "day08")) },
+        9 to { MovieTheater(readFile(YEAR, "day09")) },
     )
 
     override fun findDay(day: Int) = days[day]?.invoke()

@@ -3,7 +3,7 @@ package cc.hubisoft.utils
 class Map2D<T> {
     val xSize: Int
     val ySize: Int
-    private val fields: HashMap<Pair<Int, Int>, T>
+    private val fields: MutableMap<Pair<Int, Int>, T>
 
     constructor(input: List<List<T>>) {
         if (input.isEmpty()) throw IllegalArgumentException("Input must not be empty")
