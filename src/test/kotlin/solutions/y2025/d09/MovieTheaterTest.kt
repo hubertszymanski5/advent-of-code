@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import readTestFile
 
-
 class MovieTheaterTest {
 
     private val input = readTestFile(2025, "day09")
@@ -18,7 +17,7 @@ class MovieTheaterTest {
         assertThat(movieTheater.solvePartI()).isEqualTo(50)
     }
 
-    @Disabled("sadly... no idea how to solve it yet")
+    @Disabled("example is edge case that does not occur in main input")
     @Test
     fun `solves part II`() {
         val movieTheater = MovieTheater(input)
